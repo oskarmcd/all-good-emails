@@ -27,3 +27,15 @@ test("OSKARMCDERMOTT@GMAIL.VERMÖGENSBERATER is valid", () => {
 test("OSKARMCDERMOTT@GMAIL.政府 is valid", () => {
   expect(validate("OSKARMCDERMOTT@GMAIL.政府")).toBe(true);
 });
+
+test("oskar.mcdermott@gmail.com is valid", () => {
+  expect(validate("oskar.mcdermott@gmail.com")).toBe(true);
+});
+
+test("name@fullname.xyz is valid", () => {
+  expect(validate("name@fullname.xyz")).toBe(true);
+});
+
+test("name+service@fullname.xyz is valid", () => {
+  expect(validate("name+service@fullname.xyz")).toBe(true);
+});
