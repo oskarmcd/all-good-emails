@@ -2,7 +2,7 @@ import tlds from "../tlds";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function valid(email: string): boolean {
+export default function valid(email: string): boolean {
   if (!EMAIL_REGEX.test(email)) {
     return false;
   }

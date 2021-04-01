@@ -1,29 +1,29 @@
-import { valid } from "../index";
+import validate from "../index";
 
 test("oskar@mcdermott.com is valid", () => {
-  expect(valid("oskar@mcdermott.com")).toBe(true);
+  expect(validate("oskar@mcdermott.com")).toBe(true);
 });
 
 test("oskar@mcdermott.co.uk is valid", () => {
-  expect(valid("oskar@mcdermott.co.uk")).toBe(true);
+  expect(validate("oskar@mcdermott.co.uk")).toBe(true);
 });
 
 test("oskar@ mcdermott.co.uk is invalid", () => {
-  expect(valid("oskar@ mcdermott.co.uk")).toBe(false);
+  expect(validate("oskar@ mcdermott.co.uk")).toBe(false);
 });
 
 test("OSKARMCDERMOTT@GMAIL.COM is valid", () => {
-  expect(valid("OSKARMCDERMOTT@GMAIL.COM")).toBe(true);
+  expect(validate("OSKARMCDERMOTT@GMAIL.COM")).toBe(true);
 });
 
 test("OSKARMCDERMOTTGMAIL.COM is invalid", () => {
-  expect(valid("OSKARMCDERMOTTGMAIL.COM")).toBe(false);
+  expect(validate("OSKARMCDERMOTTGMAIL.COM")).toBe(false);
 });
 
 test("OSKARMCDERMOTT@GMAIL.VERMÖGENSBERATER is valid", () => {
-  expect(valid("OSKARMCDERMOTT@GMAIL.VERMÖGENSBERATER")).toBe(true);
+  expect(validate("OSKARMCDERMOTT@GMAIL.VERMÖGENSBERATER")).toBe(true);
 });
 
 test("OSKARMCDERMOTT@GMAIL.政府 is valid", () => {
-  expect(valid("OSKARMCDERMOTT@GMAIL.政府")).toBe(true);
+  expect(validate("OSKARMCDERMOTT@GMAIL.政府")).toBe(true);
 });
