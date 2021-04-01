@@ -1,10 +1,12 @@
 {
-  "name": "email-tld-validator",
+  "name": "all-good-emails",
   "version": "0.0.1",
   "scripts": {
     "test": "jest --config jestconfig.json",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare" : "yarn build"
   },
+  "description": "An email validator / regex that also considers the email TLD",
   "main": "index.ts",
   "license": "MIT",
   "devDependencies": {

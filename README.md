@@ -4,7 +4,7 @@ This should hopefully solve your problems if you also want to validate an email 
 
 ## Usage
 ```
-import { validate } from "email-tld-validator"
+import { validate } from "all-good-emails"
 
 validate("jane@doe.io") // true
 validate("jane@doe.oi") // false

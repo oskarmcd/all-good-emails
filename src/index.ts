@@ -7,8 +7,10 @@ export function valid(email: string): boolean {
     return false;
   }
 
-  const suffix = email.split("@");
-  const [_, tld] = suffix[suffix.length - 1].split(".");
+  const match = email.match(/\.([^\.]+)$/) || [];
+  if (match.length > 1) {
+    return tlds.has(match[1].toLowerCase());
+  }
 
-  return tlds.has(tld.toLowerCase());
+  return false;
 }
