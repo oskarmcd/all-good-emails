@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
+    "target": "es5",
     "module": "commonjs",
-    "target": "esnext",
-    "sourceMap": false,
-    "experimentalDecorators": true,
-    "noImplicitAny": true,
-    "strict": true,
     "declaration": true,
-    "lib": ["esnext", "dom"]
+    "strict": true,
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "esModuleInterop": true
   },
-  "exclude": ["node_modules", "dist/"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*", "dist"]
 }
